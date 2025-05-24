@@ -1,0 +1,1170 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Flexe - Professional Warehousing Solutions
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #031221 0%, #0f0000 50%, #000407 100%);
+      min-height: 100vh;
+    }
+
+    /* Custom animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+    }
+
+    .animate-fadeInUp {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .animate-slideInRight {
+      animation: slideInRight 0.8s ease-out forwards;
+    }
+
+    .animate-pulse-slow {
+      animation: pulse 3s ease-in-out infinite;
+    }
+
+    /* Glassmorphism effect for dark theme */
+    .glass {
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Custom gradient backgrounds */
+    .gradient-bg {
+      background: linear-gradient(135deg, #E6B24B 0%, #D4A843 50%, #C19A3B 100%);
+    }
+
+    .warehouse-pattern {
+      background-image:
+        radial-gradient(circle at 25% 25%, rgba(230, 178, 75, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(230, 178, 75, 0.05) 0%, transparent 50%),
+        linear-gradient(45deg, rgba(255, 255, 255, 0.02) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(255, 255, 255, 0.02) 25%, transparent 25%);
+      background-size: 60px 60px, 80px 80px, 20px 20px, 20px 20px;
+    }
+
+    /* Enhanced hover effects */
+    .hover-lift {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .hover-lift:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .hover-glow:hover {
+      box-shadow: 0 0 30px rgba(230, 178, 75, 0.6);
+    }
+
+    /* Dark hover effects for images */
+    .hover-dark:hover {
+      filter: brightness(0.7) contrast(1.2);
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
+
+    /* Enhanced dark theme elements */
+    .dark-card {
+      background: linear-gradient(145deg, rgba(0, 0, 0, 0.6), rgba(30, 30, 30, 0.4));
+      border: 1px solid rgba(230, 178, 75, 0.2);
+    }
+
+    .dark-section {
+      background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 50%, #1a1a1a 100%);
+    }
+
+    /* Professional button styles */
+    .btn-primary {
+      background: linear-gradient(135deg, #E6B24B 0%, #D4A843 100%);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: left 0.5s;
+    }
+
+    .btn-primary:hover::before {
+      left: 100%;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(230, 178, 75, 0.4);
+    }
+
+    /* Light theme specific styles */
+    .text-primary {
+      color: #1e293b;
+    }
+
+    .text-secondary {
+      color: #64748b;
+    }
+
+    .bg-light {
+      background-color: #ffffff;
+    }
+
+    .border-light {
+      border-color: rgba(0, 0, 0, 0.1);
+    }
+  </style>
+ </head>
+ <body class="text-white bg-gradient-to-br from-gray-900 via-black to-gray-800">
+  <!-- Top banner -->
+  <div class="gradient-bg text-black text-xs px-2 sm:px-4 py-2 flex flex-col sm:flex-row justify-between items-center relative overflow-hidden gap-2 sm:gap-0">
+   <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse-slow"></div>
+   <p class="text-center sm:text-left truncate max-w-full font-medium relative z-10 text-xs sm:text-sm">
+    <i class="fas fa-star mr-1 sm:mr-2"></i>
+    <span class="hidden sm:inline">Managing Supply Chain Challenges: An Online Dialogue on How to Compete</span>
+    <span class="sm:hidden">Supply Chain Solutions Guide</span>
+   </p>
+   <a class="font-bold text-xs sm:text-sm hover:underline transition-all duration-300 relative z-10 hover:scale-105 whitespace-nowrap" href="#">
+    Download Guide
+    <i class="fas fa-download ml-1 sm:ml-2"></i>
+   </a>
+  </div>
+
+  <!-- Header -->
+  <header class="glass sticky top-0 z-50 border-b border-[#E6B24B]/20 relative overflow-hidden">
+   <!-- Animated background pattern -->
+   <div class="absolute inset-0 warehouse-pattern opacity-20"></div>
+   <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#E6B24B] to-transparent"></div>
+
+   <div class="relative max-w-[90rem] mx-auto px-3 sm:px-6 lg:px-8 py-3 sm:py-4">
+    <div class="flex items-center justify-between">
+     <!-- Logo Section with enhanced design -->
+     <div class="flex items-center space-x-2 sm:space-x-3 group">
+      <div class="w-10 h-10 sm:w-12 sm:h-12 gradient-bg rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+       <i class="fas fa-warehouse text-black text-lg sm:text-xl"></i>
+      </div>
+      <div>
+       <h1 class="text-xl sm:text-2xl font-bold text-white group-hover:text-[#E6B24B] transition-colors duration-300">Flexe</h1>
+       <p class="text-xs text-gray-300 font-medium hidden sm:block">Professional Warehousing</p>
+      </div>
+     </div>
+
+     <!-- Navigation -->
+     <nav class="hidden lg:flex space-x-6 xl:space-x-8 text-sm font-medium text-white">
+      <a class="hover:text-[#E6B24B] transition-all duration-300 hover:scale-105 relative group" href="#">
+       <span class="hidden xl:inline">Marketplace & Solutions</span>
+       <span class="xl:hidden">Solutions</span>
+       <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#E6B24B] transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a class="hover:text-[#E6B24B] transition-all duration-300 hover:scale-105 relative group" href="#">
+       How it Works
+       <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#E6B24B] transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a class="hover:text-[#E6B24B] transition-all duration-300 hover:scale-105 relative group" href="#">
+       Company
+       <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#E6B24B] transition-all duration-300 group-hover:w-full"></span>
+      </a>
+      <a class="hover:text-[#E6B24B] transition-all duration-300 hover:scale-105 relative group" href="#">
+       Resources
+       <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#E6B24B] transition-all duration-300 group-hover:w-full"></span>
+      </a>
+     </nav>
+
+     <!-- Action Buttons -->
+     <div class="flex items-center space-x-2 sm:space-x-4">
+      <button class="btn-primary text-black font-semibold px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm hover-glow hidden sm:block">
+       Get a Demo
+      </button>
+      <button aria-label="Search" class="text-white hover:text-[#E6B24B] transition-all duration-300 hover:scale-110 p-2 hidden sm:block">
+       <i class="fas fa-search text-lg"></i>
+      </button>
+      <!-- Mobile menu button -->
+      <button id="mobile-menu-btn" class="lg:hidden text-white hover:text-[#E6B24B] transition-all duration-300 p-2">
+       <i class="fas fa-bars text-lg"></i>
+      </button>
+     </div>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="lg:hidden hidden mt-4 pb-4">
+     <nav class="flex flex-col space-y-4 text-white">
+      <a class="hover:text-[#E6B24B] transition-all duration-300 py-2 border-b border-gray-700" href="#">
+       Marketplace & Solutions
+      </a>
+      <a class="hover:text-[#E6B24B] transition-all duration-300 py-2 border-b border-gray-700" href="#">
+       How it Works
+      </a>
+      <a class="hover:text-[#E6B24B] transition-all duration-300 py-2 border-b border-gray-700" href="#">
+       Company
+      </a>
+      <a class="hover:text-[#E6B24B] transition-all duration-300 py-2 border-b border-gray-700" href="#">
+       Resources
+      </a>
+      <div class="pt-4 space-y-3">
+       <button class="btn-primary text-black font-semibold px-6 py-2 rounded-full text-sm hover-glow w-full">
+        Get a Demo
+       </button>
+       <button aria-label="Search" class="text-white hover:text-[#E6B24B] transition-all duration-300 w-full py-2">
+        <i class="fas fa-search text-lg mr-2"></i>Search
+       </button>
+      </div>
+     </nav>
+    </div>
+   </div>
+  </header>
+  <!-- Hero Section - Professional Redesign -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+   <!-- Clean Background -->
+   <div class="absolute inset-0 z-0">
+    <img alt="Modern warehouse interior with advanced logistics systems" class="w-full h-full object-cover opacity-20" src="https://storage.googleapis.com/a1aa/image/9c48abd1-3218-4b0e-f1dc-fee2691a67c4.jpg"/>
+    <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-800"></div>
+   </div>
+
+   <!-- Hero Content -->
+   <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+     <!-- Left Content - Clean Professional Design -->
+     <div class="space-y-8 text-center lg:text-left">
+
+      <!-- Status Badge -->
+      <div class="inline-flex items-center px-4 py-2 bg-[#E6B24B]/10 border border-[#E6B24B]/30 rounded-full">
+       <div class="w-2 h-2 bg-[#E6B24B] rounded-full mr-3"></div>
+       <span class="text-[#E6B24B] font-semibold text-sm uppercase tracking-wide">Industry Leading Solutions</span>
+      </div>
+
+      <!-- Main Heading -->
+      <div class="space-y-6">
+       <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight">
+        Transform Your
+        <span class="block text-[#E6B24B]">Supply Chain</span>
+       </h1>
+       <p class="text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+        Leverage our cutting-edge, flexible warehousing solutions to optimize your supply chain efficiency and drive sustainable growth.
+       </p>
+      </div>
+
+      <!-- Key Value Proposition -->
+      <div class="bg-gradient-to-r from-[#E6B24B]/5 to-transparent border-l-4 border-[#E6B24B] pl-6 py-4">
+       <p class="text-lg text-white font-medium">
+        Run the supply chain you want, on your terms
+       </p>
+       <p class="text-[#E6B24B] text-sm font-medium mt-1">
+        Complete control and flexibility
+       </p>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+       <button class="bg-gradient-to-r from-[#E6B24B] to-[#D4A843] text-black font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#E6B24B]/25">
+        <div class="flex items-center justify-center space-x-3">
+         <i class="fas fa-rocket text-lg"></i>
+         <span class="text-lg">Get Started Today</span>
+         <i class="fas fa-arrow-right"></i>
+        </div>
+       </button>
+       <button class="border-2 border-[#E6B24B]/30 text-white hover:text-[#E6B24B] font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:border-[#E6B24B]/60 hover:bg-[#E6B24B]/5">
+        <div class="flex items-center justify-center space-x-3">
+         <i class="fas fa-play text-lg"></i>
+         <span class="text-lg">Watch Demo</span>
+        </div>
+       </button>
+      </div>
+
+      <!-- Trust Indicators -->
+      <div class="flex items-center justify-center lg:justify-start space-x-8 text-sm text-gray-400 pt-4">
+       <div class="flex items-center space-x-2">
+        <i class="fas fa-shield-check text-[#E6B24B]"></i>
+        <span>No Setup Fees</span>
+       </div>
+       <div class="flex items-center space-x-2">
+        <i class="fas fa-clock text-[#E6B24B]"></i>
+        <span>Quick Integration</span>
+       </div>
+       <div class="flex items-center space-x-2">
+        <i class="fas fa-headset text-[#E6B24B]"></i>
+        <span>24/7 Support</span>
+       </div>
+      </div>
+
+     </div>
+
+     <!-- Right Stats Section - Clean Professional Layout -->
+     <div class="relative">
+
+      <!-- Professional Stats Dashboard -->
+      <div class="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-[#E6B24B]/20 rounded-2xl p-8">
+
+       <!-- Dashboard Header -->
+       <div class="text-center mb-8">
+        <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-[#E6B24B] to-[#D4A843] rounded-xl shadow-lg mb-4">
+         <i class="fas fa-chart-bar text-black text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-2">Key Performance Metrics</h3>
+        <div class="w-20 h-0.5 bg-[#E6B24B] mx-auto"></div>
+       </div>
+
+       <!-- Metrics Grid -->
+       <div class="grid grid-cols-2 gap-6 mb-8">
+
+        <!-- Metric: Warehouse Locations -->
+        <div class="text-center p-4 bg-black/20 rounded-xl border border-[#E6B24B]/10 hover:border-[#E6B24B]/30 transition-all duration-300">
+         <div class="w-12 h-12 bg-[#E6B24B]/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+          <i class="fas fa-map-marker-alt text-[#E6B24B] text-lg"></i>
+         </div>
+         <div class="text-3xl font-bold text-[#E6B24B] mb-1">1000+</div>
+         <div class="text-white text-sm font-medium mb-1">Warehouse Locations</div>
+         <div class="text-gray-400 text-xs">Across North America</div>
+        </div>
+
+        <!-- Metric: Uptime -->
+        <div class="text-center p-4 bg-black/20 rounded-xl border border-[#E6B24B]/10 hover:border-[#E6B24B]/30 transition-all duration-300">
+         <div class="w-12 h-12 bg-[#E6B24B]/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+          <i class="fas fa-shield-alt text-[#E6B24B] text-lg"></i>
+         </div>
+         <div class="text-3xl font-bold text-[#E6B24B] mb-1">99.9%</div>
+         <div class="text-white text-sm font-medium mb-1">Uptime</div>
+         <div class="text-gray-400 text-xs">Guaranteed</div>
+        </div>
+
+        <!-- Metric: Support -->
+        <div class="text-center p-4 bg-black/20 rounded-xl border border-[#E6B24B]/10 hover:border-[#E6B24B]/30 transition-all duration-300">
+         <div class="w-12 h-12 bg-[#E6B24B]/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+          <i class="fas fa-headset text-[#E6B24B] text-lg"></i>
+         </div>
+         <div class="text-3xl font-bold text-[#E6B24B] mb-1">24/7</div>
+         <div class="text-white text-sm font-medium mb-1">Support</div>
+         <div class="text-gray-400 text-xs">Available</div>
+        </div>
+
+        <!-- Metric: Clients -->
+        <div class="text-center p-4 bg-black/20 rounded-xl border border-[#E6B24B]/10 hover:border-[#E6B24B]/30 transition-all duration-300">
+         <div class="w-12 h-12 bg-[#E6B24B]/20 rounded-lg flex items-center justify-center mx-auto mb-3">
+          <i class="fas fa-users text-[#E6B24B] text-lg"></i>
+         </div>
+         <div class="text-3xl font-bold text-[#E6B24B] mb-1">500+</div>
+         <div class="text-white text-sm font-medium mb-1">Clients</div>
+         <div class="text-gray-400 text-xs">Served</div>
+        </div>
+
+       </div>
+
+       <!-- Trusted By Section -->
+       <div class="text-center pt-6 border-t border-[#E6B24B]/20">
+        <div class="text-gray-400 text-sm mb-4">Trusted by industry leaders</div>
+        <div class="flex justify-center items-center space-x-6 opacity-60">
+         <i class="fab fa-amazon text-white text-2xl hover:text-[#E6B24B] transition-colors"></i>
+         <i class="fab fa-google text-white text-2xl hover:text-[#E6B24B] transition-colors"></i>
+         <i class="fab fa-microsoft text-white text-2xl hover:text-[#E6B24B] transition-colors"></i>
+         <i class="fab fa-apple text-white text-2xl hover:text-[#E6B24B] transition-colors"></i>
+        </div>
+       </div>
+
+      </div>
+     </div>
+
+    </div>
+   </div>
+
+   <!-- Scroll indicator -->
+   <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+    <div class="text-[#E6B24B] animate-bounce">
+     <i class="fas fa-chevron-down text-xl"></i>
+    </div>
+   </div>
+  </section>
+  <!-- Solutions Section - Modernized -->
+  <section class="py-20 bg-gradient-to-br from-gray-900 via-black to-gray-800 relative overflow-hidden">
+   <!-- Background Elements -->
+   <div class="absolute inset-0 bg-gradient-to-r from-[#E6B24B]/5 via-transparent to-[#E6B24B]/5"></div>
+
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+     <div class="inline-flex items-center px-4 py-2 bg-[#E6B24B]/10 border border-[#E6B24B]/30 rounded-full mb-6">
+      <i class="fas fa-cogs text-[#E6B24B] mr-2"></i>
+      <span class="text-[#E6B24B] font-semibold text-sm uppercase tracking-wide">Our Solutions</span>
+     </div>
+     <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+      Comprehensive <span class="text-[#E6B24B]">Warehousing Solutions</span>
+     </h2>
+     <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+      Discover how our flexible warehousing infrastructure transforms your business operations and drives growth
+     </p>
+    </div>
+
+    <!-- Solution Categories -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+     <!-- Finance Solutions -->
+     <div class="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-[#E6B24B]/20 rounded-2xl p-8 hover:border-[#E6B24B]/40 transition-all duration-300 group">
+      <div class="w-16 h-16 bg-gradient-to-br from-[#E6B24B] to-[#D4A843] rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+       <i class="fas fa-chart-line text-black text-2xl"></i>
+      </div>
+      <h3 class="text-xl font-bold text-white mb-4">Finance Solutions</h3>
+      <p class="text-gray-300 mb-6 leading-relaxed">
+       Mitigate financial risks and optimize cash flow with flexible warehousing infrastructure.
+      </p>
+      <ul class="space-y-3 mb-6">
+       <li class="flex items-start space-x-3">
+        <div class="w-2 h-2 bg-[#E6B24B] rounded-full mt-2 flex-shrink-0"></div>
+        <span class="text-gray-300 text-sm">Manage excess inventory efficiently</span>
+       </li>
+       <li class="flex items-start space-x-3">
+        <div class="w-2 h-2 bg-[#E6B24B] rounded-full mt-2 flex-shrink-0"></div>
+        <span class="text-gray-300 text-sm">Secure space during slowdowns</span>
+       </li>
+       <li class="flex items-start space-x-3">
+        <div class="w-2 h-2 bg-[#E6B24B] rounded-full mt-2 flex-shrink-0"></div>
+        <span class="text-gray-300 text-sm">Mitigate cash flow disruptions</span>
+       </li>
+      </ul>
+      <button class="text-[#E6B24B] font-semibold hover:text-white transition-colors duration-300 group-hover:translate-x-2 transform">
+       Learn More <i class="fas fa-arrow-right ml-2"></i>
+      </button>
+     </div>
+
+     <!-- Logistics Solutions -->
+     <div class="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-[#E6B24B]/20 rounded-2xl p-8 hover:border-[#E6B24B]/40 transition-all duration-300 group">
+      <div class="w-16 h-16 bg-gradient-to-br from-[#E6B24B] to-[#D4A843] rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+       <i class="fas fa-truck text-black text-2xl"></i>
+      </div>
+      <h3 class="text-xl font-bold text-white mb-4">Logistics Solutions</h3>
+      <p class="text-gray-300 mb-6 leading-relaxed">
+       Optimize your supply chain with our nationwide network of flexible warehouse facilities.
+      </p>
+      <ul class="space-y-3 mb-6">
+       <li class="flex items-start space-x-3">
+        <div class="w-2 h-2 bg-[#E6B24B] rounded-full mt-2 flex-shrink-0"></div>
+        <span class="text-gray-300 text-sm">Access 1000+ warehouse locations</span>
+       </li>
+       <li class="flex items-start space-x-3">
+        <div class="w-2 h-2 bg-[#E6B24B] rounded-full mt-2 flex-shrink-0"></div>
+        <span class="text-gray-300 text-sm">Flexible capacity scaling</span>
+       </li>
+       <li class="flex items-start space-x-3">
+        <div class="w-2 h-2 bg-[#E6B24B] rounded-full mt-2 flex-shrink-0"></div>
+        <span class="text-gray-300 text-sm">Real-time inventory tracking</span>
+       </li>
+      </ul>
+      <button class="text-[#E6B24B] font-semibold hover:text-white transition-colors duration-300 group-hover:translate-x-2 transform">
+       Learn More <i class="fas fa-arrow-right ml-2"></i>
+      </button>
+     </div>
+
+     <!-- Operations Solutions -->
+     <div class="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-[#E6B24B]/20 rounded-2xl p-8 hover:border-[#E6B24B]/40 transition-all duration-300 group">
+      <div class="w-16 h-16 bg-gradient-to-br from-[#E6B24B] to-[#D4A843] rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+       <i class="fas fa-cogs text-black text-2xl"></i>
+      </div>
+      <h3 class="text-xl font-bold text-white mb-4">Operations Solutions</h3>
+      <p class="text-gray-300 mb-6 leading-relaxed">
+       Streamline operations with advanced technology and dedicated support teams.
+      </p>
+      <ul class="space-y-3 mb-6">
+       <li class="flex items-start space-x-3">
+        <div class="w-2 h-2 bg-[#E6B24B] rounded-full mt-2 flex-shrink-0"></div>
+        <span class="text-gray-300 text-sm">Advanced WMS integration</span>
+       </li>
+       <li class="flex items-start space-x-3">
+        <div class="w-2 h-2 bg-[#E6B24B] rounded-full mt-2 flex-shrink-0"></div>
+        <span class="text-gray-300 text-sm">Dedicated account management</span>
+       </li>
+       <li class="flex items-start space-x-3">
+        <div class="w-2 h-2 bg-[#E6B24B] rounded-full mt-2 flex-shrink-0"></div>
+        <span class="text-gray-300 text-sm">24/7 operational support</span>
+       </li>
+      </ul>
+      <button class="text-[#E6B24B] font-semibold hover:text-white transition-colors duration-300 group-hover:translate-x-2 transform">
+       Learn More <i class="fas fa-arrow-right ml-2"></i>
+      </button>
+     </div>
+    </div>
+
+    <!-- Featured Solution Highlight -->
+    <div class="bg-gradient-to-r from-[#E6B24B]/10 to-transparent border border-[#E6B24B]/30 rounded-2xl p-8 md:p-12">
+     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+       <div class="inline-flex items-center px-3 py-1 bg-[#E6B24B]/20 rounded-full mb-6">
+        <i class="fas fa-star text-[#E6B24B] mr-2"></i>
+        <span class="text-[#E6B24B] font-semibold text-sm">Featured Solution</span>
+       </div>
+       <h3 class="text-3xl font-bold text-white mb-6">
+        Complete Supply Chain Transformation
+       </h3>
+       <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+        Experience the power of integrated warehousing solutions that adapt to your business needs and scale with your growth.
+       </p>
+       <div class="flex flex-col sm:flex-row gap-4">
+        <button class="bg-gradient-to-r from-[#E6B24B] to-[#D4A843] text-black font-bold px-8 py-4 rounded-xl hover:scale-105 transition-transform duration-300">
+         Get Started Today
+        </button>
+        <button class="border-2 border-[#E6B24B]/30 text-white hover:text-[#E6B24B] font-semibold px-8 py-4 rounded-xl hover:border-[#E6B24B]/60 transition-all duration-300">
+         Schedule Demo
+        </button>
+       </div>
+      </div>
+      <div class="relative">
+       <img alt="Modern warehouse operations with advanced technology" class="w-full h-80 object-cover rounded-xl" src="https://storage.googleapis.com/a1aa/image/34858ec6-8f84-4102-6c2b-20baf9b176b6.jpg"/>
+       <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-xl"></div>
+       <div class="absolute bottom-6 left-6 right-6">
+        <div class="bg-black/60 backdrop-blur-sm border border-[#E6B24B]/30 rounded-xl p-4">
+         <div class="flex items-center justify-between">
+          <div>
+           <div class="text-2xl font-bold text-[#E6B24B]">$2.5M</div>
+           <div class="text-sm text-gray-300">Average Cost Savings</div>
+          </div>
+          <div class="w-12 h-12 bg-[#E6B24B] rounded-full flex items-center justify-center">
+           <i class="fas fa-arrow-up text-black text-lg"></i>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Enhanced Stats Section -->
+  <section class="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 mb-20 py-16 dark-section relative overflow-hidden">
+   <div class="absolute inset-0 warehouse-pattern opacity-10"></div>
+   <div class="relative text-center mb-12">
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+     Proven <span class="gradient-bg bg-clip-text text-transparent">Results</span>
+    </h2>
+    <p class="text-lg text-gray-300">
+     See the impact of our warehousing solutions on businesses like yours
+    </p>
+   </div>
+
+   <div class="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+    <div class="dark-card rounded-2xl p-8 text-center hover-lift hover-glow group">
+     <div class="w-16 h-16 bg-[#E6B24B] rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+      <i class="fas fa-chart-line text-black text-2xl"></i>
+     </div>
+     <div class="text-5xl font-bold text-[#E6B24B] mb-3 group-hover:scale-105 transition-transform duration-300">
+      124%
+     </div>
+     <div class="text-sm uppercase text-[#E6B24B] font-semibold mb-3 tracking-wider">
+      Inventory Growth
+     </div>
+     <p class="text-sm text-gray-300 leading-relaxed">
+      Increase in inventory growth for customers using Flexe’s warehousing network.
+     </p>
+    </div>
+    <div class="dark-card rounded-2xl p-8 text-center hover-lift hover-glow group">
+     <div class="w-16 h-16 bg-[#E6B24B] rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+      <i class="fas fa-star text-black text-2xl"></i>
+     </div>
+     <div class="text-5xl font-bold text-[#E6B24B] mb-3 group-hover:scale-105 transition-transform duration-300">
+      4/5
+     </div>
+     <div class="text-sm uppercase text-[#E6B24B] font-semibold mb-3 tracking-wider">
+      Customer Satisfaction
+     </div>
+     <p class="text-sm text-gray-300 leading-relaxed">
+      Average customer satisfaction rating on Flexe’s platform.
+     </p>
+    </div>
+    <div class="dark-card rounded-2xl p-6 sm:p-8 text-center hover-lift hover-glow group sm:col-span-2 lg:col-span-1">
+     <div class="w-14 h-14 sm:w-16 sm:h-16 bg-[#E6B24B] rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+      <i class="fas fa-recycle text-black text-xl sm:text-2xl"></i>
+     </div>
+     <div class="text-4xl sm:text-5xl font-bold text-[#E6B24B] mb-2 sm:mb-3 group-hover:scale-105 transition-transform duration-300">
+      50%
+     </div>
+     <div class="text-xs sm:text-sm uppercase text-[#E6B24B] font-semibold mb-2 sm:mb-3 tracking-wider">
+      Reduction in Waste
+     </div>
+     <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+      Reduction in waste and excess inventory for Flexe customers.
+     </p>
+    </div>
+   </div>
+  </section>
+  <!-- Enhanced Trusted Brands Section -->
+  <section class="py-16 bg-gradient-to-br from-gray-900 via-black to-gray-800 relative overflow-hidden">
+   <!-- Background Elements -->
+   <div class="absolute inset-0 bg-gradient-to-r from-[#E6B24B]/3 via-transparent to-[#E6B24B]/3"></div>
+
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+     <div class="inline-flex items-center px-4 py-2 bg-[#E6B24B]/10 border border-[#E6B24B]/30 rounded-full mb-6">
+      <i class="fas fa-handshake text-[#E6B24B] mr-2"></i>
+      <span class="text-[#E6B24B] font-semibold text-sm uppercase tracking-wide">Trusted Partners</span>
+     </div>
+     <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+      Trusted by <span class="text-[#E6B24B]">Industry Leaders</span>
+     </h2>
+     <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+      Join thousands of companies that rely on our warehousing solutions to power their supply chains
+     </p>
+    </div>
+
+    <!-- Logos Grid -->
+    <div class="bg-gradient-to-br from-gray-800/40 to-gray-900/40 backdrop-blur-sm border border-[#E6B24B]/20 rounded-2xl p-8 md:p-12">
+     <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8 items-center justify-items-center">
+      <div class="group">
+       <img alt="Target logo in white" class="h-10 md:h-12 object-contain transition-all duration-300 opacity-60 group-hover:opacity-100 group-hover:scale-110" height="48" src="https://storage.googleapis.com/a1aa/image/a71e4072-5456-47d3-2a02-e658c099f7e0.jpg" width="96"/>
+      </div>
+      <div class="group">
+       <img alt="Mars logo in white" class="h-10 md:h-12 object-contain transition-all duration-300 opacity-60 group-hover:opacity-100 group-hover:scale-110" height="48" src="https://storage.googleapis.com/a1aa/image/8d31cd78-48c8-4dcf-17ee-0a0438cae939.jpg" width="96"/>
+      </div>
+      <div class="group">
+       <img alt="Nike logo in white" class="h-10 md:h-12 object-contain transition-all duration-300 opacity-60 group-hover:opacity-100 group-hover:scale-110" height="48" src="https://storage.googleapis.com/a1aa/image/047533b3-8e5d-463b-ca1f-a26171905eba.jpg" width="96"/>
+      </div>
+      <div class="group">
+       <img alt="Dick's Sporting Goods logo in white" class="h-10 md:h-12 object-contain transition-all duration-300 opacity-60 group-hover:opacity-100 group-hover:scale-110" height="48" src="https://storage.googleapis.com/a1aa/image/68e4ab82-a079-436d-243c-d1724168dde4.jpg" width="96"/>
+      </div>
+      <div class="group">
+       <img alt="Utz logo in white" class="h-10 md:h-12 object-contain transition-all duration-300 opacity-60 group-hover:opacity-100 group-hover:scale-110" height="48" src="https://storage.googleapis.com/a1aa/image/b1439b75-214e-4622-9e68-24ff942d2887.jpg" width="96"/>
+      </div>
+      <div class="group">
+       <img alt="Lowe's logo in white" class="h-10 md:h-12 object-contain transition-all duration-300 opacity-60 group-hover:opacity-100 group-hover:scale-110" height="48" src="https://storage.googleapis.com/a1aa/image/75765106-72d7-4b70-32fb-b855c4d796a9.jpg" width="96"/>
+      </div>
+      <div class="group">
+       <img alt="The Home Depot logo in white" class="h-10 md:h-12 object-contain transition-all duration-300 opacity-60 group-hover:opacity-100 group-hover:scale-110" height="48" src="https://storage.googleapis.com/a1aa/image/2f349d91-a0df-4e09-c7ca-980e7a05c37f.jpg" width="96"/>
+      </div>
+      <div class="group">
+       <img alt="Costco logo in white" class="h-10 md:h-12 object-contain transition-all duration-300 opacity-60 group-hover:opacity-100 group-hover:scale-110" height="48" src="https://storage.googleapis.com/a1aa/image/86fa1797-195d-4892-c2d4-47b0b8cb2cdd.jpg" width="96"/>
+      </div>
+     </div>
+
+     <!-- Trust Indicators -->
+     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-[#E6B24B]/20">
+      <div class="text-center">
+       <div class="text-3xl font-bold text-[#E6B24B] mb-2">500+</div>
+       <div class="text-gray-300 text-sm">Enterprise Clients</div>
+      </div>
+      <div class="text-center">
+       <div class="text-3xl font-bold text-[#E6B24B] mb-2">10+</div>
+       <div class="text-gray-300 text-sm">Years of Trust</div>
+      </div>
+      <div class="text-center">
+       <div class="text-3xl font-bold text-[#E6B24B] mb-2">99%</div>
+       <div class="text-gray-300 text-sm">Client Retention</div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Tabs for Logistics Network, Technology Platform, Data Intelligence, Operations Team -->
+  <section class="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 mb-20 dark-section py-16 relative overflow-hidden">
+   <div class="absolute inset-0 warehouse-pattern opacity-10"></div>
+   <div class="relative flex space-x-12 max-w-md mb-8 text-xs font-semibold">
+    <button class="border-b-2 border-[#E6B24B] pb-1 text-[#E6B24B] hover:scale-105 transition-transform duration-300">
+     Logistics Network
+    </button>
+    <button class="text-gray-300 hover:text-[#E6B24B] transition-colors duration-300 hover:scale-105">
+     Technology Platform
+    </button>
+    <button class="text-gray-300 hover:text-[#E6B24B] transition-colors duration-300 hover:scale-105">
+     Data Intelligence
+    </button>
+    <button class="text-gray-300 hover:text-[#E6B24B] transition-colors duration-300 hover:scale-105">
+     Operations Team
+    </button>
+   </div>
+   <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <div>
+     <h3 class="text-3xl font-bold text-white mb-6 max-w-lg">
+      World-class flexible warehousing in every major market
+     </h3>
+     <p class="text-lg text-gray-300 mb-6 max-w-lg leading-relaxed">
+      Turn your supply chain into a flexible advantage. Flexe’s network of warehouses throughout the U.S. and Canada is designed to meet your needs and grow with you.
+     </p>
+     <button class="btn-primary text-black font-semibold px-6 py-3 rounded-full hover-glow mb-6">
+      Learn More
+      <i class="fas fa-arrow-right ml-2"></i>
+     </button>
+     <ul class="list-disc list-inside text-sm text-[#B3B3B3] space-y-2 max-w-lg">
+      <li>
+       Access flexible 3PL warehouse space in every major city and region
+      </li>
+      <li>
+       Tap into a network of warehouses that meet your needs
+      </li>
+      <li>
+       Leverage a full-service warehouse management system and dedicated account teams
+      </li>
+     </ul>
+    </div>
+    <div class="relative max-w-md mx-auto">
+     <img alt="Map of the United States with highlighted warehouse locations connected by lines and dots" class="rounded-lg object-cover w-full h-full" height="300" src="https://storage.googleapis.com/a1aa/image/f9424c26-4fed-4aa0-17d7-1e049629e23c.jpg" width="400"/>
+    </div>
+   </div>
+  </section>
+  <!-- Enhanced Featured Insights -->
+  <section class="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 mb-20 py-16 dark-section relative overflow-hidden">
+   <div class="absolute inset-0 warehouse-pattern opacity-15"></div>
+   <div class="relative flex justify-between items-center mb-12">
+    <div>
+     <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">
+      Featured <span class="gradient-bg bg-clip-text text-transparent">Insights</span>
+     </h2>
+     <p class="text-lg text-gray-300">
+      Stay informed with the latest industry trends and best practices
+     </p>
+    </div>
+    <a class="btn-primary text-black font-semibold px-6 py-3 rounded-full hover-glow" href="#">
+     View All Resources
+     <i class="fas fa-arrow-right ml-2"></i>
+    </a>
+   </div>
+
+   <div class="relative grid grid-cols-1 md:grid-cols-3 gap-8">
+    <article class="dark-card rounded-2xl overflow-hidden hover-lift hover-glow group">
+     <div class="relative overflow-hidden">
+      <img alt="Modern warehouse operations with advanced technology" class="w-full h-48 object-cover hover-dark group-hover:scale-105 transition-all duration-500" src="https://storage.googleapis.com/a1aa/image/f4bd92ea-9372-4305-5194-aef0f16f88e7.jpg"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+      <div class="absolute top-4 left-4">
+       <span class="bg-[#E6B24B] text-black text-xs font-semibold px-3 py-1 rounded-full shadow-lg">
+        Warehouse Tech
+       </span>
+      </div>
+     </div>
+     <div class="p-6">
+      <h5 class="text-lg font-semibold text-white mb-3 group-hover:text-[#E6B24B] transition-colors">
+       Future of Warehouse Automation
+      </h5>
+      <p class="text-sm text-gray-300 mb-4 leading-relaxed">
+       Discover how AI and robotics are transforming warehouse operations for maximum efficiency.
+      </p>
+      <a class="text-[#E6B24B] font-semibold text-sm hover:underline group-hover:scale-105 transition-transform duration-300 inline-block" href="#">
+       Read More
+       <i class="fas fa-arrow-right ml-1"></i>
+      </a>
+     </div>
+    </article>
+
+    <article class="glass rounded-2xl overflow-hidden hover-lift group">
+     <div class="relative overflow-hidden">
+      <img alt="Global supply chain logistics and shipping" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" src="https://storage.googleapis.com/a1aa/image/8e056e9e-764e-464e-f082-32e1af6d0a55.jpg"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+      <div class="absolute top-4 left-4">
+       <span class="bg-[#E6B24B] text-black text-xs font-semibold px-3 py-1 rounded-full">
+        Supply Chain
+       </span>
+      </div>
+     </div>
+     <div class="p-6">
+      <h5 class="text-lg font-semibold text-white mb-3 group-hover:text-[#E6B24B] transition-colors">
+       Global Supply Chain Resilience
+      </h5>
+      <p class="text-sm text-gray-200 mb-4 leading-relaxed">
+       Learn strategies to build resilient supply chains that adapt to market disruptions.
+      </p>
+      <a class="text-[#E6B24B] font-semibold text-sm hover:underline" href="#">
+       Read More
+       <i class="fas fa-arrow-right ml-1"></i>
+      </a>
+     </div>
+    </article>
+
+    <article class="glass rounded-2xl overflow-hidden hover-lift group">
+     <div class="relative overflow-hidden">
+      <img alt="Efficient warehouse inventory management" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" src="https://storage.googleapis.com/a1aa/image/63202905-ebf2-4045-a754-9e146579a025.jpg"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+      <div class="absolute top-4 left-4">
+       <span class="bg-[#E6B24B] text-black text-xs font-semibold px-3 py-1 rounded-full">
+        Best Practices
+       </span>
+      </div>
+     </div>
+     <div class="p-6">
+      <h5 class="text-lg font-semibold text-white mb-3 group-hover:text-[#E6B24B] transition-colors">
+       Inventory Optimization Strategies
+      </h5>
+      <p class="text-sm text-gray-200 mb-4 leading-relaxed">
+       Master inventory management techniques that reduce costs and improve efficiency.
+      </p>
+      <a class="text-[#E6B24B] font-semibold text-sm hover:underline" href="#">
+       Read More
+       <i class="fas fa-arrow-right ml-1"></i>
+      </a>
+     </div>
+    </article>
+   </div>
+  </section>
+  <!-- Enhanced Call-to-Action Banner -->
+  <section class="py-20 bg-gradient-to-br from-gray-900 via-black to-gray-800 relative overflow-hidden">
+   <!-- Background Elements -->
+   <div class="absolute inset-0 bg-gradient-to-r from-[#E6B24B]/5 via-transparent to-[#E6B24B]/5"></div>
+
+   <div class="relative">
+    <img alt="Aerial view of modern logistics hub with colorful shipping containers" class="absolute inset-0 w-full h-full object-cover opacity-20" src="https://storage.googleapis.com/a1aa/image/0a7a4e60-95b6-4f5b-5cbd-7b061c18eef6.jpg"/>
+    <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/70"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+     <div class="text-center">
+      <!-- Badge -->
+      <div class="inline-flex items-center px-4 py-2 bg-[#E6B24B]/10 border border-[#E6B24B]/30 rounded-full mb-8">
+       <i class="fas fa-rocket text-[#E6B24B] mr-2"></i>
+       <span class="text-[#E6B24B] font-semibold text-sm uppercase tracking-wide">Get Started Today</span>
+      </div>
+
+      <!-- Main Heading -->
+      <h2 class="text-4xl md:text-6xl font-bold text-white mb-8">
+       Ready to Transform Your
+       <span class="block text-[#E6B24B]">Supply Chain?</span>
+      </h2>
+
+      <!-- Description -->
+      <p class="text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+       Join thousands of companies that trust our flexible warehousing solutions to optimize their operations and drive growth
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row gap-6 justify-center mb-12">
+       <button class="bg-gradient-to-r from-[#E6B24B] to-[#D4A843] text-black font-bold px-10 py-5 rounded-xl text-lg hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-[#E6B24B]/25">
+        <i class="fas fa-rocket mr-3"></i>
+        Start Your Journey
+       </button>
+       <button class="border-2 border-[#E6B24B]/30 text-white hover:text-[#E6B24B] font-semibold px-10 py-5 rounded-xl text-lg hover:border-[#E6B24B]/60 hover:bg-[#E6B24B]/10 transition-all duration-300">
+        <i class="fas fa-phone mr-3"></i>
+        Schedule a Call
+       </button>
+      </div>
+
+      <!-- Trust Indicators -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+       <div class="text-center">
+        <div class="w-16 h-16 bg-[#E6B24B]/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+         <i class="fas fa-shield-check text-[#E6B24B] text-2xl"></i>
+        </div>
+        <div class="text-white font-semibold mb-2">Secure & Reliable</div>
+        <div class="text-gray-300 text-sm">99.9% uptime guarantee</div>
+       </div>
+       <div class="text-center">
+        <div class="w-16 h-16 bg-[#E6B24B]/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+         <i class="fas fa-clock text-[#E6B24B] text-2xl"></i>
+        </div>
+        <div class="text-white font-semibold mb-2">Quick Setup</div>
+        <div class="text-gray-300 text-sm">72-hour implementation</div>
+       </div>
+       <div class="text-center">
+        <div class="w-16 h-16 bg-[#E6B24B]/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+         <i class="fas fa-headset text-[#E6B24B] text-2xl"></i>
+        </div>
+        <div class="text-white font-semibold mb-2">24/7 Support</div>
+        <div class="text-gray-300 text-sm">Dedicated account team</div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+
+  <!-- Enhanced About Us -->
+  <section class="py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
+   <!-- Background Elements -->
+   <div class="absolute inset-0 bg-gradient-to-r from-[#E6B24B]/3 via-transparent to-[#E6B24B]/3"></div>
+
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+     <!-- Content -->
+     <div>
+      <div class="inline-flex items-center px-4 py-2 bg-[#E6B24B]/10 border border-[#E6B24B]/30 rounded-full mb-8">
+       <i class="fas fa-building text-[#E6B24B] mr-2"></i>
+       <span class="text-[#E6B24B] font-semibold text-sm uppercase tracking-wide">About Flexe</span>
+      </div>
+
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-8">
+       Pioneering the Future of
+       <span class="text-[#E6B24B]">Warehousing</span>
+      </h2>
+
+      <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+       We provide flexible warehousing infrastructure that enables brands and retailers to scale their supply chains to meet spikes in demand, seasonal inventory fluctuations, and new product launches.
+      </p>
+
+      <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+       Founded in 2013 and headquartered in Seattle, we help brands and retailers meet customer demand by delivering flexible warehousing infrastructure and on-demand supply chain solutions.
+      </p>
+
+      <!-- Company Highlights -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+       <div class="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-[#E6B24B]/20 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-[#E6B24B] mb-1">2013</div>
+        <div class="text-gray-300 text-sm">Founded</div>
+       </div>
+       <div class="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-[#E6B24B]/20 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-[#E6B24B] mb-1">Seattle</div>
+        <div class="text-gray-300 text-sm">Headquarters</div>
+       </div>
+       <div class="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-[#E6B24B]/20 rounded-xl p-4 text-center">
+        <div class="text-2xl font-bold text-[#E6B24B] mb-1">Global</div>
+        <div class="text-gray-300 text-sm">Network</div>
+       </div>
+      </div>
+
+      <!-- Mission Statement -->
+      <div class="bg-gradient-to-r from-[#E6B24B]/10 to-transparent border-l-4 border-[#E6B24B] pl-6 py-4 mb-8">
+       <p class="text-white font-semibold text-lg mb-2">Our Mission</p>
+       <p class="text-gray-300">
+        To revolutionize supply chain flexibility through innovative warehousing solutions that adapt to your business needs.
+       </p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-4">
+       <button class="bg-gradient-to-r from-[#E6B24B] to-[#D4A843] text-black font-bold px-8 py-4 rounded-xl hover:scale-105 transition-transform duration-300">
+        <i class="fas fa-info-circle mr-2"></i>
+        Learn More About Us
+       </button>
+       <button class="border-2 border-[#E6B24B]/30 text-white hover:text-[#E6B24B] font-semibold px-8 py-4 rounded-xl hover:border-[#E6B24B]/60 hover:bg-[#E6B24B]/10 transition-all duration-300">
+        <i class="fas fa-users mr-2"></i>
+        Meet Our Team
+       </button>
+      </div>
+     </div>
+
+     <!-- Visual -->
+     <div class="relative">
+      <div class="bg-gradient-to-br from-[#E6B24B]/10 to-transparent rounded-2xl p-6">
+       <img alt="Professional warehouse team collaborating on logistics solutions" class="w-full h-96 object-cover rounded-xl" src="https://storage.googleapis.com/a1aa/image/5407dea6-8eb7-47df-975f-30b016c8b168.jpg"/>
+       <div class="absolute inset-6 bg-gradient-to-t from-black/60 to-transparent rounded-xl"></div>
+       <div class="absolute bottom-12 left-12 right-12">
+        <div class="bg-black/60 backdrop-blur-sm border border-[#E6B24B]/30 rounded-xl p-6">
+         <div class="grid grid-cols-2 gap-6 text-center">
+          <div>
+           <div class="text-3xl font-bold text-[#E6B24B] mb-2">10+</div>
+           <div class="text-sm text-gray-300">Years Experience</div>
+          </div>
+          <div>
+           <div class="text-3xl font-bold text-white mb-2">500+</div>
+           <div class="text-sm text-gray-300">Happy Clients</div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Enhanced Footer -->
+  <footer class="relative bg-gradient-to-t from-black via-gray-900 to-black border-t border-[#E6B24B]/20 text-white">
+   <!-- Background Elements -->
+   <div class="absolute inset-0 bg-gradient-to-r from-black/50 via-gray-900/30 to-black/50"></div>
+
+   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 mb-12">
+
+     <!-- Footer Brand Section -->
+     <div class="lg:col-span-2">
+      <div class="flex items-center space-x-3 mb-6">
+       <div class="w-12 h-12 bg-gradient-to-br from-[#E6B24B] to-[#D4A843] rounded-xl flex items-center justify-center">
+        <i class="fas fa-warehouse text-black text-xl"></i>
+       </div>
+       <div>
+        <h2 class="text-2xl font-bold text-white">Flexe</h2>
+        <p class="text-sm text-gray-300">Warehousing Solutions</p>
+       </div>
+      </div>
+      <p class="text-gray-300 mb-6 max-w-md leading-relaxed">
+       Transform your supply chain with flexible warehousing infrastructure that scales with your business needs and drives sustainable growth.
+      </p>
+      <div class="flex space-x-4">
+       <a aria-label="Facebook" class="w-10 h-10 bg-gray-800/50 border border-[#E6B24B]/30 rounded-full flex items-center justify-center hover:bg-[#E6B24B] hover:text-black transition-all duration-300" href="#">
+        <i class="fab fa-facebook-f"></i>
+       </a>
+       <a aria-label="Twitter" class="w-10 h-10 bg-gray-800/50 border border-[#E6B24B]/30 rounded-full flex items-center justify-center hover:bg-[#E6B24B] hover:text-black transition-all duration-300" href="#">
+        <i class="fab fa-twitter"></i>
+       </a>
+       <a aria-label="LinkedIn" class="w-10 h-10 bg-gray-800/50 border border-[#E6B24B]/30 rounded-full flex items-center justify-center hover:bg-[#E6B24B] hover:text-black transition-all duration-300" href="#">
+        <i class="fab fa-linkedin-in"></i>
+       </a>
+       <a aria-label="Instagram" class="w-10 h-10 bg-gray-800/50 border border-[#E6B24B]/30 rounded-full flex items-center justify-center hover:bg-[#E6B24B] hover:text-black transition-all duration-300" href="#">
+        <i class="fab fa-instagram"></i>
+       </a>
+      </div>
+     </div>
+
+     <!-- Company -->
+     <div>
+      <h6 class="font-bold mb-6 text-[#E6B24B] text-sm uppercase tracking-wider">
+       Company
+      </h6>
+      <ul class="space-y-3">
+       <li>
+        <a class="text-gray-300 hover:text-[#E6B24B] text-sm transition-colors duration-300" href="#">
+         About
+        </a>
+       </li>
+       <li>
+        <a class="text-gray-300 hover:text-[#E6B24B] text-sm transition-colors duration-300" href="#">
+         Careers
+        </a>
+       </li>
+       <li>
+        <a class="text-gray-300 hover:text-[#E6B24B] text-sm transition-colors duration-300" href="#">
+         News
+        </a>
+       </li>
+       <li>
+        <a class="text-gray-300 hover:text-[#E6B24B] text-sm transition-colors duration-300" href="#">
+         Contact
+        </a>
+       </li>
+      </ul>
+     </div>
+
+     <!-- Solutions -->
+     <div>
+      <h6 class="font-bold mb-6 text-[#E6B24B] text-sm uppercase tracking-wider">
+       Solutions
+      </h6>
+      <ul class="space-y-3">
+       <li>
+        <a class="text-gray-300 hover:text-[#E6B24B] text-sm transition-colors duration-300" href="#">
+         Finance Solutions
+        </a>
+       </li>
+       <li>
+        <a class="text-gray-300 hover:text-[#E6B24B] text-sm transition-colors duration-300" href="#">
+         Logistics Network
+        </a>
+       </li>
+       <li>
+        <a class="text-gray-300 hover:text-[#E6B24B] text-sm transition-colors duration-300" href="#">
+         Technology Platform
+        </a>
+       </li>
+       <li>
+        <a class="text-gray-300 hover:text-[#E6B24B] text-sm transition-colors duration-300" href="#">
+         Data Intelligence
+        </a>
+       </li>
+      </ul>
+     </div>
+
+     <!-- Resources -->
+     <div>
+      <h6 class="font-bold mb-6 text-[#E6B24B] text-sm uppercase tracking-wider">
+       Resources
+      </h6>
+      <ul class="space-y-3">
+       <li>
+        <a class="text-gray-300 hover:text-[#E6B24B] text-sm transition-colors duration-300" href="#">
+         Blog
+        </a>
+       </li>
+       <li>
+        <a class="text-gray-300 hover:text-[#E6B24B] text-sm transition-colors duration-300" href="#">
+         Case Studies
+        </a>
+       </li>
+       <li>
+        <a class="text-gray-300 hover:text-[#E6B24B] text-sm transition-colors duration-300" href="#">
+         Help Center
+        </a>
+       </li>
+       <li>
+        <a class="text-gray-300 hover:text-[#E6B24B] text-sm transition-colors duration-300" href="#">
+         Support
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="border-t border-[#E6B24B]/20 pt-8">
+     <div class="flex flex-col md:flex-row justify-between items-center">
+      <p class="text-sm text-gray-300 mb-4 md:mb-0">
+       © 2024 Flexe, Inc. All rights reserved.
+       <span class="mx-2">|</span>
+       <a href="#" class="hover:text-[#E6B24B] transition-colors duration-300">Privacy Policy</a>
+       <span class="mx-2">|</span>
+       <a href="#" class="hover:text-[#E6B24B] transition-colors duration-300">Terms of Service</a>
+      </p>
+      <div class="flex items-center space-x-3">
+       <span class="text-sm text-gray-300">Powered by innovation</span>
+       <div class="w-2 h-2 bg-[#E6B24B] rounded-full animate-pulse"></div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </footer>
+
+  <!-- Mobile Menu JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIcon = mobileMenuBtn.querySelector('i');
+
+      mobileMenuBtn.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+
+        // Toggle icon between bars and times
+        if (mobileMenu.classList.contains('hidden')) {
+          menuIcon.className = 'fas fa-bars text-lg';
+        } else {
+          menuIcon.className = 'fas fa-times text-lg';
+        }
+      });
+
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', function(event) {
+        if (!mobileMenuBtn.contains(event.target) && !mobileMenu.contains(event.target)) {
+          mobileMenu.classList.add('hidden');
+          menuIcon.className = 'fas fa-bars text-lg';
+        }
+      });
+
+      // Close mobile menu when window is resized to desktop
+      window.addEventListener('resize', function() {
+        if (window.innerWidth >= 1024) {
+          mobileMenu.classList.add('hidden');
+          menuIcon.className = 'fas fa-bars text-lg';
+        }
+      });
+    });
+  </script>
+ </body>
+</html>
